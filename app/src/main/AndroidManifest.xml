@@ -15,7 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".KotlinActivity"></activity>
+        <activity android:name="com.panku.KotlinActivity"></activity>
     </application>
 
 </manifest>

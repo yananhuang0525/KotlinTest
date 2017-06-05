@@ -1,11 +1,12 @@
 package com.panku.kotlintest
+
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
+import com.panku.KotlinActivity
 
 /**
  * Date：2017/6/5
@@ -28,13 +29,16 @@ class KotlinTest : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View) {
         val id = v.id
-        if (id == R.id.btn) {
-            Toast.makeText(this, et!!.text.toString(), Toast.LENGTH_LONG).show()
-            startActivity(Intent(this, KotlinActivity::class.java))
+//        if (id == R.id.btn) {
+//            Toast.makeText(this, et!!.text.toString(), Toast.LENGTH_LONG).show()
+//            startActivity(Intent(this, KotlinActivity::class.java))
+//        }
+        when (id) {
+            R.id.btn -> startActivity(Intent(this, KotlinActivity::class.java))
         }
     }
 
-    private fun init() {
+    fun init() {
         startActivity(Intent(this, KotlinActivity::class.java))
 
         val intent = Intent()
